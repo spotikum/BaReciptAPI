@@ -41,13 +41,6 @@ class AuthController extends Controller
         $user->password = $hashPass;
         $user->save();
         return $this->login($request);
-        
-        // catch(Exception $e){
-        //     return response()->json([
-        //         'success'=> false,
-        //         'message'=> ''.$e
-        //     ]);
-        // }
     }
 
     public function logout(Request $request){
